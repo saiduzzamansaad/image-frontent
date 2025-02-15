@@ -28,7 +28,7 @@ const ImageScraper = () => {
     }
     setLoading(true);
     try {
-      const response = await axios.post("http://127.0.0.1:5000/scrape", { url });
+      const response = await axios.post("https://image-backend-231q.onrender.com", { url });
       setImages(response.data.images || []);
     } catch {
       alert("❌ Error fetching images!");
